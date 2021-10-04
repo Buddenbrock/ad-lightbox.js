@@ -1,0 +1,88 @@
+:root {
+  --button-background-color: #000;
+  --button-color: #fff;
+  --overlay-color: rgba(0, 0, 0, .7);
+}
+
+.ad-lightbox {
+  left: 0;
+  opacity: 1;
+  pointer-events: auto;
+  position: fixed;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+  will-change: opacity, pointer-events;
+}
+
+@media print {
+  .ad-lightbox {
+    display: none;
+  }
+}
+
+.ad-lightbox:not(.visible) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ad-lightbox__overlay {
+  background-color: var(--overlay-color);
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 9999;
+}
+
+.ad-lightbox__content {
+  height: auto;
+  max-width: 800px;
+  position: relative;
+  width: 90vw;
+  z-index: 10000;
+}
+
+@media only screen and (min-width: 52em) {
+  .ad-lightbox__content {
+    width: 75vw;
+  }
+}
+
+@media only screen and (min-width: 68em) {
+  .ad-lightbox__content {
+    min-width: 400px;
+    width: 50vw;
+  }
+}
+
+.ad-lightbox__content a {
+  text-decoration: none;
+}
+
+.ad-lightbox__button {
+  background-color: var(--button-background-color);
+  border-radius: 1rem;
+  border: 0;
+  color: var(--button-color);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  right: 0.75rem;
+  top: 0.75rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.ad-lightbox__button:hover,
+.ad-lightbox__button:focus {
+  transform: scale(1.1);
+}
+
+.ad-lightbox__button:active {
+  transform: scale(1);
+}
+
+.ad-lightbox__image {
+  height: auto;
+  width: 100%;
+}

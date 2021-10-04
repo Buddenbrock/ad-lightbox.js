@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AdLightbox.js - Demo</title>
+
+    <link rel="stylesheet" href="./../src/ad-lightbox.css" />
+    <link rel="stylesheet" href="./demo.css" />
+</head>
+<body>
+
+<header>
+    <img class="logo" src="./../src/logo.svg" alt="Logo: AdLightbox.js" />
+</header>
+
+<main>
+    <h1>AdLightbox.js</h1>
+    <p>Javascript for adding an advertisement lightbox</p>
+
+    <h2>Installation</h2>
+    <h3>Using npm</h3>
+    <code>npm -i @buddenbrock/ad-lightbox.js --save</code>
+
+    <h3>Using yarn</h3>
+    <code>yarn add @buddenbrock/ad-lightbox.js</code>
+
+    <h2>How to use</h2>
+    <p>Take a look at the small example in the demo folder</p>
+
+    <h3>Add the script bundle to your footer script block</h3>
+    <code>&#60;script src="./src/ad-lightbox.js"></script></code>
+
+    <h3>Add options</h3>
+    <p>Define your options. These given options are defaults.</p>
+
+    <code>
+        <pre>
+let adLightbox = new AdLightbox({
+    image: 'https://via.placeholder.com/1400x500',
+    link: 'https://www.google.com',
+    linkTarget: '_blank',
+    closeButtonContent: 'Close',
+
+    visibilityClass: 'visible',
+    wrapperClass: 'ad-lightbox',
+    overlayClass: 'ad-lightbox__overlay',
+    closeButtonClass: 'ad-lightbox__button',
+    contentClass: 'ad-lightbox__content',
+    imageClass: 'ad-lightbox__image'
+});
+        </pre>
+    </code>
+</main>
+
+<footer>
+    &copy 2021 buddenbrock
+</footer>
+
+<script src="./../src/ad-lightbox.js"></script>
+<script>
+    let adLightbox = new AdLightbox({
+        image: 'https://via.placeholder.com/1400x500',
+        link: 'https://www.google.com',
+        linkTarget: '_blank',
+        closeButtonContent: 'Close',
+        visibilityClass: 'visible',
+        wrapperClass: 'ad-lightbox',
+        overlayClass: 'ad-lightbox__overlay',
+        closeButtonClass: 'ad-lightbox__button',
+        contentClass: 'ad-lightbox__content',
+        imageClass: 'ad-lightbox__image'
+    });
+</script>
+</body>
+</html>
