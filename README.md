@@ -2,7 +2,7 @@
 
 [logo-advertisement-lightbox]: src/logo.svg
 
-# ContrastSwitch.js
+# AdLightbox.js
 ![GitHub licenze](https://img.shields.io/github/license/Buddenbrock/ad-lightbox.js?style=for-the-badge)
 ![GitHub release](https://img.shields.io/github/package-json/version/Buddenbrock/ad-lightbox.js?style=for-the-badge)
 ![Last commit](https://img.shields.io/github/last-commit/buddenbrock/ad-lightbox.js?style=for-the-badge)
@@ -10,7 +10,7 @@
 
 Javascript for adding an advertisement lightbox
 
-## INSTALLATION
+## Installation
 ### Using npm
 ```sh
 npm -i @buddenbrock/ad-lightbox.js --save
@@ -21,7 +21,7 @@ npm -i @buddenbrock/ad-lightbox.js --save
 yarn add @buddenbrock/ad-lightbox.js
 ```
 
-## HOW TO USE
+## How to use
 Take a look at the small example in the demo folder
 
 ### Add the script bundle to your footer script block
@@ -48,8 +48,8 @@ let adLightbox = new AdLightbox({
 });
 ```
 
-## DONATION
+## Donation
 This is free, open-source software. If you'd like to support the development of future projects, or say thanks for this one, you can [donate](https://www.paypal.me/buddenbrock).
 
-## LICENSE
+## License
 GPL-3.0 &copy; [@buddenbrock/ad-lightbox.js](https://github.com/Buddenbrock/ad-lightbox.js/blob/master/LICENSE)
