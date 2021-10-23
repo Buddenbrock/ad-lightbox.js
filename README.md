@@ -24,6 +24,12 @@ yarn add @buddenbrock/ad-lightbox.js
 ## How to use
 Take a look at the small example in the demo folder
 
+### Add the styles bundle to your head block
+```html
+<link href="./src/ad-lightbox.min.css" rel="stylesheet" />
+
+```
+
 ### Add the script bundle to your footer script block
 ```html
 <script src="./src/ad-lightbox.min.js"></script>
