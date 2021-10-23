@@ -26,7 +26,7 @@ Take a look at the small example in the demo folder
 
 ### Add the script bundle to your footer script block
 ```html
-<script src="./src/ad-lightbox.js"></script>
+<script src="./src/ad-lightbox.min.js"></script>
 ```
 
 ### Add options

@@ -14,8 +14,8 @@ class AdLightbox {
             imageClass: options.imageClass || 'ad-lightbox__image',
         }
 
-        if(!document.querySelector('.' + this.options.wrapperClass)) {
-            if(this.options.image !== null) {
+        if (!document.querySelector('.' + this.options.wrapperClass)) {
+            if (this.options.image !== null) {
                 this.buildLightbox();
             } else {
                 console.log('No image defined');
@@ -67,12 +67,12 @@ class AdLightbox {
     buildLink = () => {
         let link;
 
-        if(this.options.link) {
+        if (this.options.link) {
             link = document.createElement('a');
 
             this.setAttribute(link, 'href', this.options.link);
 
-            if(this.options.linkTarget !== null) {
+            if (this.options.linkTarget !== null) {
                 this.setAttribute(link, 'target', this.options.linkTarget);
             }
         } else {
@@ -128,7 +128,7 @@ class AdLightbox {
             link = this.buildLink(),
             image = this.buildImage();
 
-        if(link !== null) {
+        if (link !== null) {
             link.appendChild(image);
             content.appendChild(link);
         } else {
@@ -184,4 +184,3 @@ class AdLightbox {
         this.setEventListener(this.lightbox.closeButton, 'click', this.toggleVisibility);
     }
 }
-
