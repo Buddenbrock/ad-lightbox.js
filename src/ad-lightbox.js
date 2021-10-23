@@ -52,15 +52,6 @@ class AdLightbox {
     }
 
     /**
-     * @desc remove given class on given element
-     * @param element
-     * @param className
-     */
-    removeClass = (element, className) => {
-        element.classList.remove(className)
-    }
-
-    /**
      * @desc set given attribute value on given element
      * @param element
      * @param attr
