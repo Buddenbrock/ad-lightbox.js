@@ -6,6 +6,7 @@
     "advertisement",
     "lightbox"
   ],
+  "homepage": "https://github.com/Buddenbrock/ad-lightbox.js",
   "author": "Dirk Buddenbrock <git@dirk-buddenbrock.de>",
   "contributors": [
     {
@@ -16,10 +17,10 @@
   "readme": "README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Buddenbrock/advertisement-lightbox.js.git"
+    "url": "git+https://github.com/Buddenbrock/ad-lightbox.js.git"
   },
   "bugs": {
-    "url": "https://github.com/Buddenbrock/advertisement-lightbox.js/issues"
+    "url": "https://github.com/Buddenbrock/ad-lightbox.js/issues"
   },
   "license": "GPL-3.0"
 }
