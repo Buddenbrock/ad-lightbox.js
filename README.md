@@ -4,7 +4,7 @@
 ![Last commit](https://img.shields.io/github/last-commit/buddenbrock/ad-lightbox.js?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Buddenbrock/ad-lightbox.js?style=for-the-badge)
 
-JavaScript for adding an advertisement lightbox
+JavaScript for adding a lightbox with a linked image.
 
 ## Installation
 ### Using npm
