@@ -1,7 +1,3 @@
-![layout][logo-advertisement-lightbox]
-
-[logo-advertisement-lightbox]: src/logo.svg
-
 # AdLightbox.js
 ![GitHub licenze](https://img.shields.io/github/license/Buddenbrock/ad-lightbox.js?style=for-the-badge)
 ![GitHub release](https://img.shields.io/github/package-json/version/Buddenbrock/ad-lightbox.js?style=for-the-badge)
