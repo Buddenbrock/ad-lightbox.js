@@ -1,37 +1,57 @@
-## Welcome to GitHub Pages
+## AdLightbox.js
+![GitHub licenze](https://img.shields.io/github/license/Buddenbrock/ad-lightbox.js?style=for-the-badge)
+![GitHub release](https://img.shields.io/github/package-json/version/Buddenbrock/ad-lightbox.js?style=for-the-badge)
+![Last commit](https://img.shields.io/github/last-commit/buddenbrock/ad-lightbox.js?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/Buddenbrock/ad-lightbox.js?style=for-the-badge)
 
-You can use the [editor on GitHub](https://github.com/Buddenbrock/ad-lightbox.js/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Javascript for adding an advertisement lightbox
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+### Installation
+#### Using npm
+```sh
+npm -i @buddenbrock/ad-lightbox.js --save
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+#### Using yarn
+```sh
+yarn add @buddenbrock/ad-lightbox.js
+```
 
-### Jekyll Themes
+### How to use
+Take a look at the small example in the demo folder
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Buddenbrock/ad-lightbox.js/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+#### Add the styles bundle to your head block
+```html
+<link href="./src/ad-lightbox.min.css" rel="stylesheet" />
 
-### Support or Contact
+```
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+#### Add the script bundle to your footer script block
+```html
+<script src="./src/ad-lightbox.min.js"></script>
+```
+
+#### Add options
+Define your options. These given options are defaults.
+
+```javascript
+let adLightbox = new AdLightbox({
+    image: 'https://via.placeholder.com/1400x500',
+    link: 'https://www.google.com',
+    linkTarget: '_blank',
+    closeButtonContent: 'Close',
+    
+    visibilityClass: 'visible',
+    wrapperClass: 'ad-lightbox',
+    overlayClass: 'ad-lightbox__overlay',
+    closeButtonClass: 'ad-lightbox__button',
+    contentClass: 'ad-lightbox__content',
+    imageClass: 'ad-lightbox__image'
+});
+```
+
+### Donation
+This is free, open-source software. If you'd like to support the development of future projects, or say thanks for this one, you can [donate](https://www.paypal.me/buddenbrock).
+
+### License
+GPL-3.0 &copy; [@buddenbrock/ad-lightbox.js](https://github.com/Buddenbrock/ad-lightbox.js/blob/master/LICENSE)
