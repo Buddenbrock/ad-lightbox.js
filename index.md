@@ -49,18 +49,19 @@ let adLightbox = new AdLightbox();
 Defining your options by adding settings array to class init. These options are supported. Not redefined options will be set by default values.
 
 #### Settings
-| Property             | Description                                    | Options                       | Default              |
-|:---------------------|:-----------------------------------------------|:------------------------------|:---------------------|
-| `image`              | ad image path                                  | string                        |                      |
-| `link`               | link for linked ad image                       | string                        |                      |
-| `linkTarget`         | defines the target window base of a reference. | _blank, _self, _parent, _top  | _blank               |
-| `closeButtonContent` | lightbox close button text                     | string                        | Close                |
-| `visibilityClass`    | class set if lightbox is shown                 | string                        | visible              |
-| `wrapperClass`       | class set for lightbox-wrapper                 | string                        | ad-lightbox          |
-| `overlayClass`       | class set for background overlay               | string                        | ad-lightbox__overlay |
-| `closeButtonClass`   | class set for lightbox close button            | string                        | ad-lightbox__button  |
-| `contentClass`       | class set for lightbox content wrapper         | string                        | ad-lightbox__content |
-| `imageClass`         | class set for lightbox ad image                | string                        | ad-lightbox__image   |
+
+| Property              | Description                                      | Options                       | Default               |
+|:----------------------|:-------------------------------------------------|:------------------------------|:----------------------|
+| `image`               | ad image path                                    | string                        |                       |
+| `link`                | link for linked ad image                         | string                        |                       |
+| `linkTarget`          | defines the target window base of a reference.   | _blank, _self, _parent, _top  | _blank                |
+| `closeButtonContent`  | lightbox close button text                       | string                        | Close                 |
+| `visibilityClass`     | class set if lightbox is shown                   | string                        | visible               |
+| `wrapperClass`        | class set for lightbox-wrapper                   | string                        | ad-lightbox           |
+| `overlayClass`        | class set for background overlay                 | string                        | ad-lightbox__overlay  |
+| `closeButtonClass`    | class set for lightbox close button              | string                        | ad-lightbox__button   |
+| `contentClass`        | class set for lightbox content wrapper           | string                        | ad-lightbox__content  |
+| `imageClass`          | class set for lightbox ad image                  | string                        | ad-lightbox__image    |
 
 ### Example
 ```javascript
