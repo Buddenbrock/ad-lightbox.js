@@ -4,49 +4,72 @@
 ![Last commit](https://img.shields.io/github/last-commit/buddenbrock/ad-lightbox.js?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Buddenbrock/ad-lightbox.js?style=for-the-badge)
 
-JavaScript for adding a lightbox with a linked image.
+This JavaScript includes a solution for adding a lightbox with a linked images which opens automatically after page loaded.
 
-## Installation
-### Using npm
+## How to install
+### Add package
+#### Using npm
 ```sh
 npm -i @buddenbrock/ad-lightbox.js --save
 ```
 
-### Using yarn
+#### Using yarn
 ```sh
 yarn add @buddenbrock/ad-lightbox.js
 ```
 
-## How to use
-Take a look at the small example in the demo folder
-
 ### Add the styles bundle to your head block
+#### Using NPM or Yarn
 ```html
 <link href="./src/ad-lightbox.min.css" rel="stylesheet" />
+```
 
+#### Using CDN
+```html
+<link href="https://unpkg.com/@buddenbrock/ad-lightbox.js@0.1.1/src/ad-lightbox.min.css" rel="stylesheet" />
 ```
 
 ### Add the script bundle to your footer script block
+#### Using NPM or Yarn
 ```html
 <script src="./src/ad-lightbox.min.js"></script>
 ```
 
-### Add options
-Define your options. These given options are defaults.
+#### Using NPM or Yarn
+```html
+<script src="https://unpkg.com/@buddenbrock/ad-lightbox.js@0.1.1/src/ad-lightbox.min.js"></script>
+```
 
+## How to use
+### Initialise class
+```javascript
+let adLightbox = new AdLightbox();
+```
+
+### Add your options
+Defining your options by adding settings array to class init. These options are supported. Not redefined options will be set by default values.
+
+#### Settings
+| Property             | Description                                    | Options                       | Default              |
+|:---------------------|:-----------------------------------------------|:------------------------------|:---------------------|
+| `image`              | ad image path                                  | string                        |                      |
+| `link`               | link for linked ad image                       | string                        |                      |
+| `linkTarget`         | defines the target window base of a reference. | _blank, _self, _parent, _top  | _blank               |
+| `closeButtonContent` | lightbox close button text                     | string                        | Close                |
+| `visibilityClass`    | class set if lightbox is shown                 | string                        | visible              |
+| `wrapperClass`       | class set for lightbox-wrapper                 | string                        | ad-lightbox          |
+| `overlayClass`       | class set for background overlay               | string                        | ad-lightbox__overlay |
+| `closeButtonClass`   | class set for lightbox close button            | string                        | ad-lightbox__button  |
+| `contentClass`       | class set for lightbox content wrapper         | string                        | ad-lightbox__content |
+| `imageClass`         | class set for lightbox ad image                | string                        | ad-lightbox__image   |
+
+### Example
 ```javascript
 let adLightbox = new AdLightbox({
     image: 'https://via.placeholder.com/1400x500',
     link: 'https://www.google.com',
     linkTarget: '_blank',
     closeButtonContent: 'Close',
-    
-    visibilityClass: 'visible',
-    wrapperClass: 'ad-lightbox',
-    overlayClass: 'ad-lightbox__overlay',
-    closeButtonClass: 'ad-lightbox__button',
-    contentClass: 'ad-lightbox__content',
-    imageClass: 'ad-lightbox__image'
 });
 ```
 
