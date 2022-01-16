@@ -73,6 +73,10 @@ let adLightbox = new AdLightbox({
 });
 ```
 
+## Future features
+- option to trigger lightbox after a special time
+- option to save closing interaction, that lightbox won't open for a defined time if user reopend page
+
 ## Donation
 This is free, open-source software. If you'd like to support the development of future projects, or say thanks for this one, you can [donate](https://www.paypal.me/buddenbrock).
 
