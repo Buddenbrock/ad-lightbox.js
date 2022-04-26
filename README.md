@@ -26,7 +26,7 @@ yarn add @buddenbrock/ad-lightbox.js
 
 #### Using CDN
 ```html
-<link href="https://unpkg.com/@buddenbrock/ad-lightbox.js@0.1.2/src/ad-lightbox.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/@buddenbrock/ad-lightbox.js@0.2.0/src/ad-lightbox.min.css" rel="stylesheet" />
 ```
 
 ### Add the script bundle to your footer script block
@@ -37,7 +37,7 @@ yarn add @buddenbrock/ad-lightbox.js
 
 #### Using NPM or Yarn
 ```html
-<script src="https://unpkg.com/@buddenbrock/ad-lightbox.js@0.1.1/src/ad-lightbox.min.js"></script>
+<script src="https://unpkg.com/@buddenbrock/ad-lightbox.js@0.2.0/src/ad-lightbox.min.js"></script>
 ```
 
 ## How to use
