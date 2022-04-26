@@ -25,7 +25,7 @@ yarn add @buddenbrock/ad-lightbox.js
 
 #### Using CDN
 ```html
-<link href="https://unpkg.com/@buddenbrock/ad-lightbox.js@0.1.2/src/ad-lightbox.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/@buddenbrock/ad-lightbox.js@0.2.0/src/ad-lightbox.min.css" rel="stylesheet" />
 ```
 
 ### Add the script bundle to your footer script block
@@ -36,7 +36,7 @@ yarn add @buddenbrock/ad-lightbox.js
 
 #### Using NPM or Yarn
 ```html
-<script src="https://unpkg.com/@buddenbrock/ad-lightbox.js@0.1.1/src/ad-lightbox.min.js"></script>
+<script src="https://unpkg.com/@buddenbrock/ad-lightbox.js@0.2.0/src/ad-lightbox.min.js"></script>
 ```
 
 ## How to use
@@ -49,18 +49,23 @@ let adLightbox = new AdLightbox();
 Defining your options by adding settings array to class init. These options are supported. Not redefined options will be set by default values.
 
 #### Settings
-| Property             | Description                                    | Options                       | Default              |
-|:---------------------|:-----------------------------------------------|:------------------------------|:---------------------|
-| `image`              | ad image path                                  | string                        |                      |
-| `link`               | link for linked ad image                       | string                        |                      |
-| `linkTarget`         | defines the target window base of a reference. | _blank, _self, _parent, _top  | _blank               |
-| `closeButtonContent` | lightbox close button text                     | string                        | Close                |
-| `visibilityClass`    | class set if lightbox is shown                 | string                        | visible              |
-| `wrapperClass`       | class set for lightbox-wrapper                 | string                        | ad-lightbox          |
-| `overlayClass`       | class set for background overlay               | string                        | ad-lightbox__overlay |
-| `closeButtonClass`   | class set for lightbox close button            | string                        | ad-lightbox__button  |
-| `contentClass`       | class set for lightbox content wrapper         | string                        | ad-lightbox__content |
-| `imageClass`         | class set for lightbox ad image                | string                        | ad-lightbox__image   |
+
+| Property             | Description                                                                                                                    | Options                      | Default              |
+|:---------------------|:-------------------------------------------------------------------------------------------------------------------------------|:-----------------------------|:---------------------|
+| `image`              | ad image path                                                                                                                  | string                       |                      |
+| `link`               | link for linked ad image                                                                                                       | string                       |                      |
+| `linkTarget`         | defines the target window base of a reference.                                                                                 | _blank, _self, _parent, _top | _blank               |
+| `closeButtonContent` | lightbox close button text                                                                                                     | string                       | Close                |
+| `visibilityClass`    | class set if lightbox is shown                                                                                                 | string                       | visible              |
+| `wrapperClass`       | class set for lightbox-wrapper                                                                                                 | string                       | ad-lightbox          |
+| `overlayClass`       | class set for background overlay                                                                                               | string                       | ad-lightbox__overlay |
+| `closeButtonClass`   | class set for lightbox close button                                                                                            | string                       | ad-lightbox__button  |
+| `contentClass`       | class set for lightbox content wrapper                                                                                         | string                       | ad-lightbox__content |
+| `imageClass`         | class set for lightbox ad image                                                                                                | string                       | ad-lightbox__image   |
+| `dontOpenAgain`      | defines the timing behavior when the lightbox wound reopened (if it's true the lightbox would reopen after given expired days) | boolean                      | true                 |
+| `localStorageKey`    | storage key in which settings will be saved                                                                                    | string                       | ad-lightbox          |
+| `localStorageExpiry` | days after which the lightbox reopend again                                                                                    | int                          | 1                    |
+
 
 ### Example
 ```javascript
@@ -74,7 +79,6 @@ let adLightbox = new AdLightbox({
 
 ## Future features
 - option to trigger lightbox after a special time
-- option to save closing interaction, that lightbox won't open for a defined time if user reopend page
 
 ## Donation
 This is free, open-source software. If you'd like to support the development of future projects, or say thanks for this one, you can [donate](https://www.paypal.me/buddenbrock).

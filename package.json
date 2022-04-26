@@ -1,26 +1,35 @@
 {
   "name": "@buddenbrock/ad-lightbox.js",
   "description": "Javascript for adding an advertisement lightbox",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "keywords": [
     "advertisement",
     "lightbox"
   ],
-  "homepage": "https://github.com/Buddenbrock/ad-lightbox.js",
-  "author": "Dirk Buddenbrock <git@dirk-buddenbrock.de>",
+  "homepage": "https://buddenbrock.github.io/ad-lightbox.js/",
+  "bugs": {
+    "url": "https://github.com/Buddenbrock/ad-lightbox.js/issues",
+    "email": "git@dirk-buddenbrock.de"
+  },
+  "license": "GPL-3.0",
+  "author": {
+    "name": "Dirk Buddenbrock",
+    "email": "git@dirk-buddenbrock.de",
+    "url": "https://www.dirk-buddenbrock.de"
+  },
   "contributors": [
     {
       "name": "CP/COMPARTNER",
       "url": "https://www.cp-compartner.de"
     }
   ],
-  "readme": "README.md",
+  "funding": {
+    "type": "PayPal",
+    "url": "https://www.paypal.me/buddenbrock"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Buddenbrock/ad-lightbox.js.git"
   },
-  "bugs": {
-    "url": "https://github.com/Buddenbrock/ad-lightbox.js/issues"
-  },
-  "license": "GPL-3.0"
+  "readme": "README.md"
 }
