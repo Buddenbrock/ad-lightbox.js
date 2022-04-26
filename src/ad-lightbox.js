@@ -12,8 +12,13 @@ class AdLightbox {
             closeButtonClass: options.closeButtonClass || 'ad-lightbox__button',
             contentClass: options.contentClass || 'ad-lightbox__content',
             imageClass: options.imageClass || 'ad-lightbox__image',
+
+            dontOpenAgain: options.dontOpenAgain || true,
+            localStorageKey: options.localStorageKey || 'ad-lightbox',
+            localStorageExpiry: options.localStorageExpiry || 1,
         }
 
+        // If there is no existing ad lightbox
         if (!document.querySelector('.' + this.options.wrapperClass)) {
             if (this.options.image !== null) {
                 this.buildLightbox();
@@ -143,9 +148,23 @@ class AdLightbox {
 
     /**
      * @desc toggle visibility of lightbox
+     * @param interaction
      */
-    toggleVisibility = () => {
-        this.toggleClass(this.lightbox.wrapper, this.options.visibilityClass);
+    toggleVisibility = interaction => {
+        if(!this.options.dontOpenAgain) {
+            this.toggleClass(this.lightbox.wrapper, this.options.visibilityClass);
+            return;
+        }
+
+        let ariaCookie = this.getFromLocalStorage(this.options.localStorageKey);
+
+        if(!ariaCookie) {
+            this.toggleClass(this.lightbox.wrapper, this.options.visibilityClass);
+
+            if(interaction) {
+                this.saveToLocalStorage(this.options.localStorageKey, true, this.options.localStorageExpiry);
+            }
+        }
     }
 
     /**
@@ -174,13 +193,50 @@ class AdLightbox {
     }
 
     /**
+     * @desc save value to local storage
+     * @param cname
+     * @param cvalue
+     * @param cexpiry
+     */
+    saveToLocalStorage = (cname, cvalue, cexpiry) => {
+        let date = new Date();
+
+        const item = {
+            value: cvalue,
+            expiry: date.getTime() + (cexpiry * 24 * 60 * 60 * 1000),
+        }
+
+        localStorage.setItem(cname, JSON.stringify(item));
+    }
+
+    /**
+     * @desc get value from local storage
+     * @param cname
+     */
+    getFromLocalStorage = cname => {
+        const itemStr = localStorage.getItem(cname);
+
+        if(!itemStr) return null;
+
+        const item = JSON.parse(itemStr),
+            now = new Date();
+
+        if(now.getTime() > item.expiry) {
+            localStorage.removeItem(cname);
+            return null;
+        }
+        return item.value;
+    }
+
+    /**
      * @desc control lightbox
      */
     controlAdLightbox = () => {
         this.setEventListener(window, 'load', this.setImagePosition);
-        this.setEventListener(window, 'load', this.toggleVisibility);
+        this.setEventListener(window, 'load', () => { this.toggleVisibility(false) });
         this.setEventListener(window, 'resize', this.setImagePosition);
-        this.setEventListener(this.lightbox.overlay, 'click', this.toggleVisibility);
-        this.setEventListener(this.lightbox.closeButton, 'click', this.toggleVisibility);
+
+        this.setEventListener(this.lightbox.overlay, 'click', () => { this.toggleVisibility(true) });
+        this.setEventListener(this.lightbox.closeButton, 'click', () => { this.toggleVisibility(true) });
     }
 }
